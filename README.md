@@ -1,11 +1,9 @@
 
 # The Role of Ex-Situ Conservation in India
 
+An academic project exploring the role of ex-situ conservation in protecting India's biodiversity, preserving endangered species, and supporting wildlife recovery through scientific and institutional approaches.
+
 ## Project Overview
-
-This project explores the role of ex-situ conservation in protecting India's biodiversity, preserving endangered species, and supporting wildlife recovery through scientific and institutional approaches.
-
-### Project Details
 
 | Field | Details |
 |---|---|
@@ -15,6 +13,23 @@ This project explores the role of ex-situ conservation in protecting India's bio
 | **Member 2 Registration ID** | `12601451` |
 | **Member 3 Registration ID** | `12603390` |
 | **Project Video** | [Watch on YouTube](https://youtu.be/LESDBxWXMIY?si=RlOQUm) |
+| **Live Project Website** | [Visit Website](https://sairamachandra-afk.github.io/Ex-situ-conservation-webpage-project-/) |
+
+---
+
+## 🌐 Live Project Website
+
+Explore the interactive website developed for this project:
+
+**[Visit The Role of Ex-Situ Conservation in India →](https://sairamachandra-afk.github.io/Ex-situ-conservation-webpage-project-/)**
+
+The website presents the importance of ex-situ conservation, biodiversity protection, endangered species preservation, and wildlife recovery in India.
+
+## 🎥 Project Video
+
+Watch the project presentation on YouTube:
+
+**[Watch Project Video →](https://youtu.be/LESDBxWXMIY?si=RlOQUm)**
 
 ---
 
@@ -28,6 +43,7 @@ This project explores the role of ex-situ conservation in protecting India's bio
 6. [Species Recovery Programs and Case Studies](#6-flagship-species-recovery-programs-and-case-studies)
 7. [The Bridge to the Wild](#7-the-bridge-to-the-wild-reintroduction-protocols)
 8. [Scientific Challenges and Limitations](#8-scientific-challenges-and-limitations)
+9. [Conclusion](#conclusion)
 
 ---
 
@@ -35,7 +51,7 @@ This project explores the role of ex-situ conservation in protecting India's bio
 
 Ex-situ conservation, also known as *off-site conservation*, is the scientific practice of protecting endangered species, subspecies, and rare plant and animal varieties outside their natural habitats.
 
-India is a globally recognized megadiverse country, accounting for approximately 7–8% of the world's recorded species while occupying only about 2.4% of its land area. Its biodiversity includes more than 45,000 plant species and 91,000 animal species, according to the figures cited in this project.
+India is a globally recognized megadiverse country, accounting for approximately 7–8% of the world's recorded species while occupying about 2.4% of its land area. Its biodiversity includes more than 45,000 plant species and 91,000 animal species, according to the figures cited in this project.
 
 Ex-situ conservation provides an important biological safety net against habitat fragmentation, climate-related stress, and extinction. It relies on specialized facilities and scientific techniques, including:
 
@@ -275,12 +291,30 @@ A coordinated approach combining **ex-situ conservation and in-situ conservation
 
 ---
 
-## Project Video
+## Project Resources
 
-Watch the project video on YouTube:
+| Resource | Link |
+|---|---|
+| 🌐 Live Project Website | [Explore the Website](https://sairamachandra-afk.github.io/Ex-situ-conservation-webpage-project-/) |
+| 🎥 Project Video | [Watch on YouTube](https://youtu.be/LESDBxWXMIY?si=RlOQUm) |
 
-[The Role of Ex-Situ Conservation in India](https://youtu.be/LESDBxWXMIY?si=RlOQUm)
+---
+
+## Technologies and Topics Covered
+
+- Ex-Situ Conservation
+- In-Situ Conservation
+- Biodiversity Preservation
+- Wildlife Conservation
+- Captive Breeding
+- Cryopreservation
+- Plant Tissue Culture
+- Genetic Resource Management
+- Endangered Species Recovery
+- Environmental Sustainability
 
 ---
 
 *Academic Project — CHE110*
+
+**Project Focus:** Understanding how scientific research, conservation institutions, and wildlife recovery initiatives contribute to biodiversity preservation in India.
