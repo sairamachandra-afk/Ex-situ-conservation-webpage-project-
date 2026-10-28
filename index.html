@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eco Guardians — Ex-Situ Conservation in India</title>
+    <link rel="icon" href="LOGO no bg.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,500;1,6..96,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Index.css">
+    <style>
+        /* Perfect two-line hero title sizing for EX SITU CONSERVATION */
+        .hero-title {
+            font-size: 7.2cqw !important;
+            line-height: 0.85 !important;
+            display: flex !important;
+            flex-direction: column !important;
+            align-items: center !important;
+        }
+
+        .hero-title-line {
+            display: flex !important;
+            flex-direction: row !important;
+            justify-content: center !important;
+            gap: 0.05em !important;
+        }
+
+        .hero-title-line.sub-line {
+            font-size: 5.6cqw !important;
+            margin-top: 0.08em !important;
+        }
+
+        /* Editorial Magazine Styling & Deep Content Layouts */
+        .magazine-section {
+            position: relative;
+            width: 100vw;
+            background-color: var(--paper);
+            padding: 120px 8%;
+            z-index: 5;
+            border-top: 1px solid var(--hairline);
+        }
+
+        .section-header {
+            max-width: 900px;
+            margin-bottom: 70px;
+        }
+
+        .section-eyebrow {
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            color: var(--rust);
+            margin-bottom: 16px;
+        }
+
+        .section-title {
+            font-family: 'Bodoni Moda', serif;
+            font-size: clamp(34px, 4.8vw, 64px);
+            font-weight: 500;
+            line-height: 1.1;
+            color: var(--ink);
+            text-transform: uppercase;
+        }
+
+        /* Definition Section Grid */
+        .definition-section {
+            position: relative;
+            width: 100vw;
+            min-height: 100svh;
+            background-color: var(--paper);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 100px 8%;
+            z-index: 5;
+            text-align: center;
+        }
+
+        .definition-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .definition-label {
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            color: var(--rust);
+            margin-bottom: 20px;
+        }
+
+        .definition-title {
+            font-family: 'Bodoni Moda', serif;
+            font-size: clamp(38px, 5.5vw, 76px);
+            font-weight: 500;
+            line-height: 1.1;
+            color: var(--ink);
+            text-transform: uppercase;
+            margin-bottom: 40px;
+        }
+
+        .definition-body {
+            font-size: clamp(15px, 1.3vw, 18px);
+            line-height: 1.8;
+            color: var(--ink-72);
+            font-weight: 400;
+            margin-bottom: 50px;
+            text-align: left;
+        }
+
+        .definition-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 40px;
+            border-top: 1px solid var(--hairline);
+            padding-top: 40px;
+            text-align: left;
+        }
+
+        .def-card h3 {
+            font-family: 'Bodoni Moda', serif;
+            font-size: 1.25rem;
+            color: var(--ink);
+            margin-bottom: 10px;
+        }
+
+        .def-card p {
+            font-size: 0.9rem;
+            line-height: 1.6;
+            color: var(--ink-72);
+        }
+
+        /* Deep Content / Institutional Architecture Grid (3 Columns) */
+        .institutional-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+        }
+
+        .inst-card {
+            background-color: rgba(67, 40, 42, 0.02);
+            border: 1px solid var(--hairline);
+            padding: 40px;
+            position: relative;
+        }
+
+        .inst-card span {
+            font-family: 'Bodoni Moda', serif;
+            font-size: 2rem;
+            color: var(--rust);
+            display: block;
+            margin-bottom: 15px;
+        }
+
+        .inst-card h3 {
+            font-family: 'Bodoni Moda', serif;
+            font-size: 1.3rem;
+            color: var(--ink);
+            margin-bottom: 12px;
+            text-transform: uppercase;
+        }
+
+        .inst-card p {
+            font-size: 0.9rem;
+            line-height: 1.7;
+            color: var(--ink-72);
+        }
+
+        /* Flagship Species Showcase (2x2 Grid) */
+        .species-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 50px;
+        }
+
+        .species-item {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .species-img-wrapper {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            overflow: hidden;
+            background-color: var(--paper-dark);
+            border: 1px solid var(--hairline);
+        }
+
+        .species-img-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .species-item:hover img {
+            transform: scale(1.04);
+        }
+
+        .species-content h3 {
+            font-family: 'Bodoni Moda', serif;
+            font-size: 1.4rem;
+            color: var(--ink);
+            margin-bottom: 8px;
+            text-transform: uppercase;
+        }
+
+        .species-content p {
+            font-size: 0.92rem;
+            line-height: 1.7;
+            color: var(--ink-72);
+        }
+
+        /* Bridge to Wild / Quote Section */
+        .bridge-section {
+            background-color: var(--ink);
+            color: var(--paper);
+            text-align: center;
+            padding: 140px 10%;
+        }
+
+        .bridge-quote {
+            font-family: 'Bodoni Moda', serif;
+            font-size: clamp(26px, 3.5vw, 52px);
+            line-height: 1.3;
+            max-width: 1100px;
+            margin: 0 auto 30px auto;
+            font-style: italic;
+        }
+
+        .bridge-author {
+            font-size: 11px;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: var(--rust);
+        }
+
+        /* Scientific Challenges & Protocols Grid */
+        .challenges-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+        }
+
+        .challenge-col h4 {
+            font-family: 'Bodoni Moda', serif;
+            font-size: 1.2rem;
+            color: var(--ink);
+            margin-bottom: 12px;
+            text-transform: uppercase;
+        }
+
+        .challenge-col p {
+            font-size: 0.9rem;
+            line-height: 1.7;
+            color: var(--ink-72);
+        }
+
+        @media (max-width: 900px) {
+            .institutional-grid, .species-grid, .challenges-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- SVG Noise Grain Layer -->
+    <svg class="grain-overlay">
+        <filter id="noiseFilter">
+            <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="3" stitchTiles="stitch"/>
+        </filter>
+        <rect width="100%" height="100%" filter="url(#noiseFilter)" />
+    </svg>
+
+    <!-- SECTION 1: HERO -->
+    <section class="hero-section" id="heroSection">
+        <div class="hero-stage" id="heroStage">
+            <img class="hero-photo-layer" src="https://d2ol7oe51mr4n9.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/934f4b51-d05b-4498-9c4a-8262f044da66.jpg" alt="Conservation Background">
+            
+            <div class="hero-title-block">
+                <div class="hero-eyebrow">ROLE OF</div>
+                <h1 class="hero-title" id="heroTitle">
+                    <span class="hero-title-line">EX SITU</span>
+                    <span class="hero-title-line sub-line">CONSERVATION</span>
+                </h1>
+            </div>
+
+            <img class="hero-cutout-layer" src="https://d2ol7oe51mr4n9.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/5d850aba-1a5b-44eb-bd6c-cd9f87845be7.webp" alt="Elephant Cutout">
+
+            <div class="hero-melt-gradient" id="heroMeltGradient"></div>
+        </div>
+
+        <header class="navbar">
+            <div class="nav-brand">
+                <img src="LOGO no bg.png" alt="Eco Guardians Logo" class="nav-logo-img">
+                <span class="brand-title">ECO<br>GUARDIANS</span>
+            </div>
+
+            <div class="nav-search">
+                <button class="search-btn">
+                    <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                    </svg>
+                    <span>SEARCH</span>
+                </button>
+            </div>
+        </header>
+
+        <a href="#definitionSection" class="map-pill" id="mapPill" onclick="event.preventDefault(); document.getElementById('definitionSection').scrollIntoView({behavior: 'smooth'});">
+            <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            <span>Explore Ex-Situ Conservation</span>
+        </a>
+    </section>
+
+    <!-- SECTION 2: WHAT IS EX-SITU CONSERVATION -->
+    <section class="definition-section" id="definitionSection">
+        <div class="definition-container">
+            <div class="definition-label">Core Definition & Scientific Scope</div>
+            <h2 class="definition-title">What is Ex-Situ Conservation?</h2>
+            <p class="definition-body">
+                Ex-situ conservation (“off-site conservation”) is the deliberate scientific practice of protecting endangered species, subspecies, or rare varieties of plants and animals outside their natural habitats[cite: 34]. In India—a globally recognized mega-diverse nation accounting for 7-8% of all recorded species globally (comprising over 45,000 plant species and 91,000 animal species across just 2.4% of the world's land area)[cite: 11]—this framework serves as an absolute biological safety net. It utilizes specialized botanical gardens, managed zoological parks, cryopreservation laboratories, and national gene banks to safeguard rich endemic biodiversity against rapid habitat fragmentation, climate-induced stressors, and extinction pressures.
+            </p>
+
+            <div class="definition-grid">
+                <div class="def-card">
+                    <h3>01 / Captive Breeding</h3>
+                    <p>Controlled multi-generational breeding programs in secure wildlife facilities designed to rebuild depleted populations of highly threatened endemic fauna like the Pygmy Hog.</p>
+                </div>
+                <div class="def-card">
+                    <h3>02 / Botanical Gardens</h3>
+                    <p>Maintained living flora collections preserving rare, endemic, and medicinal plant species under expert horticultural supervision across diverse regional micro-climates.</p>
+                </div>
+                <div class="def-card">
+                    <h3>03 / Gene & Seed Banks</h3>
+                    <p>Advanced cryopreservation facilities storing orthodox seeds, pollen, tissues, and DNA samples under ultra-low temperatures as a permanent insurance policy against extinction.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: INSTITUTIONAL ARCHITECTURE & GOVERNANCE -->
+    <section class="magazine-section">
+        <div class="section-header">
+            <div class="section-eyebrow">Regulatory Framework</div>
+            <h2 class="section-title">Institutional Architecture & Governance</h2>
+        </div>
+        <div class="institutional-grid">
+            <div class="inst-card">
+                <span>01</span>
+                <h3>Central Zoo Authority (CZA)</h3>
+                <p>Established as a statutory body under the Wildlife (Protection) Act, the CZA governs all recognized zoos across India. It enforces strict recognition rules, shifting zoos from entertainment to active scientific research, animal welfare, and coordinated captive preservation.</p>
+            </div>
+            <div class="inst-card">
+                <span>02</span>
+                <h3>NBPGR Gene Repositories</h3>
+                <p>The National Bureau of Plant Genetic Resources (New Delhi) acts as the premier nodal agency for managing and cryopreserving plant genetic material, crop wild relatives, and orthodox seeds under secure long-term cold storage vaults.</p>
+            </div>
+            <div class="inst-card">
+                <span>03</span>
+                <h3>LaCONES Molecular Labs</h3>
+                <p>Situated within CCMB Hyderabad, the Laboratory for Conservation of Endangered Species specializes in advanced DNA banking, molecular taxonomy, assisted reproduction technologies (ART), and wildlife forensics.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 4: CORE METHODOLOGICAL PILLARS -->
+    <section class="magazine-section">
+        <div class="section-header">
+            <div class="section-eyebrow">Scientific Methods</div>
+            <h2 class="section-title">Core Methodological Pillars & Technologies</h2>
+        </div>
+        <div class="institutional-grid">
+            <div class="inst-card">
+                <span>A</span>
+                <h3>Studbook Lineage Tracking</h3>
+                <p>Captive populations are monitored via rigorous regional and international studbooks. Coordinators analyze genetic lineages to minimize inbreeding depression, preserve maximum allelic diversity, and ensure demographic resilience.</p>
+            </div>
+            <div class="inst-card">
+                <span>B</span>
+                <h3>Cryogenic Germplasm Storage</h3>
+                <p>Utilizing liquid nitrogen at -196°C to completely arrest cellular metabolism. Facilities safely store orthodox seeds, plant tissues, and viable animal gametes as an unyielding backup against sudden ecological disasters.</p>
+            </div>
+            <div class="inst-card">
+                <span>C</span>
+                <h3>Micropropagation & Tissue Culture</h3>
+                <p>Advanced botanical labs (such as CIMAP Lucknow) employ *in vitro* tissue culture to rapidly mass-produce slow-germinating endemic flora, rare orchids, and endangered regional timber varieties without depleting wild stands[cite: 46].</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 5: ADVANCED CATEGORIES & SPECIALIZED DISCIPLINES -->
+    <section class="magazine-section">
+        <div class="section-header">
+            <div class="section-eyebrow">Specialized Disciplines</div>
+            <h2 class="section-title">Advanced Ex-Situ Categories & Protocols</h2>
+        </div>
+        <div class="institutional-grid">
+            <div class="inst-card">
+                <span>I</span>
+                <h3>Botanical & Horticultural Arboreta</h3>
+                <p>Specialized living plant networks—such as the Acharya Jagadish Chandra Bose Indian Botanic Garden—maintain extensive arboreta and specialized glasshouse conservatories, preserving threatened gymnosperms, palms, and medicinal herbs across controlled regional microclimates.</p>
+            </div>
+            <div class="inst-card">
+                <span>II</span>
+                <h3>Assisted Reproductive Tech (ART)</h3>
+                <p>Cutting-edge reproductive science including gamete cryobanking, artificial insemination, and in-vitro fertilization (IVF) protocols pioneered by labs like LaCONES to rescue monomorphic or critically low-count mammalian species.</p>
+            </div>
+            <div class="inst-card">
+                <span>III</span>
+                <h3>Legal Mandates & WPA 1972</h3>
+                <p>Governed strictly by Chapter IVA of India's Wildlife (Protection) Act, 1972, ex-situ breeding facilities operate under rigorous legal frameworks that prohibit unauthorized commercial utilization and enforce stringent trans-location permits.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW CATEGORY SECTION: COMPLEMENTARY CONSERVATION NETWORKS -->
+    <section class="magazine-section">
+        <div class="section-header">
+            <div class="section-eyebrow">Global & Regional Collaboration</div>
+            <h2 class="section-title">Complementary International & Domestic Frameworks</h2>
+        </div>
+        <div class="institutional-grid">
+            <div class="inst-card">
+                <span>01</span>
+                <h3>CITES International Treaties</h3>
+                <p>The Convention on International Trade in Endangered Species of Wild Fauna and Flora regulates trans-border movement and commercial exchange of captive-bred specimens, preventing illicit exploitation[cite: 34].</p>
+            </div>
+            <div class="inst-card">
+                <span>02</span>
+                <h3>IUCN Red List Assessments</h3>
+                <p>International frameworks that categorize species status from Extinct (EX) to Critically Endangered (CR), directly dictating which populations require immediate emergency ex-situ intervention[cite: 22, 24].</p>
+            </div>
+            <div class="inst-card">
+                <span>03</span>
+                <h3>Bio-Geographic Breeding Units</h3>
+                <p>Coordinated regional networks spanning India's ten distinct bio-geographic zones, ensuring that captive populations retain genetic traits adapted to specific climatic and altitudinal gradients.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 6: FLAGSHIP SPECIES RECOVERY PROGRAMS -->
+    <section class="magazine-section">
+        <div class="section-header">
+            <div class="section-eyebrow">Real-World Impact</div>
+            <h2 class="section-title">Flagship Species Recovery Programs</h2>
+        </div>
+        <div class="species-grid">
+            <div class="species-item">
+                <div class="species-img-wrapper">
+                    <!-- Real authentic location image of Manas National Park / Assam Grasslands -->
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Manas_National_Park_Assam.jpg" alt="Manas National Park Assam Grasslands">
+                </div>
+                <div class="species-content">
+                    <h3>Pygmy Hog Conservation Programme (Assam)</h3>
+                    <p>The world's smallest and rarest wild pig (*Porcula salvania*) was pulled back from the absolute brink of extinction through intensive captive breeding at the Pygmy Hog Conservation Centre (PHCC) in Assam, followed by soft releases into Manas National Park.</p>
+                </div>
+            </div>
+            <div class="species-item">
+                <div class="species-img-wrapper">
+                    <!-- Real authentic image of Greater One-Horned Rhinoceros in Kaziranga/Assam -->
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/50/One-horned_rhinoceros_Kaziranga.jpg" alt="Greater One-Horned Rhinoceros in Kaziranga">
+                </div>
+                <div class="species-content">
+                    <h3>Indian Rhino Vision & Translocations</h3>
+                    <p>Through strategic captive breeding protocols and managed translocations across Assam and West Bengal reserves, the greater one-horned rhinoceros has staged a remarkable population recovery from historic lows.</p>
+                </div>
+            </div>
+            <div class="species-item">
+                <div class="species-img-wrapper">
+                    <!-- Real authentic image representing Gharial / Riverine habitat in National Chambal Sanctuary -->
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Gharial_National_Chambal_Sanctuary.jpg" alt="Gharial in National Chambal Sanctuary">
+                </div>
+                <div class="species-content">
+                    <h3>Gharial Riverine Rehabilitation</h3>
+                    <p>Specialized rearing stations collect vulnerable wild gharial eggs from river banks, incubate and rear hatchlings safely through their high-mortality juvenile phase, and restock them into protected national river sanctuaries like the Chambal.</p>
+                </div>
+            </div>
+            <div class="species-item">
+                <div class="species-img-wrapper">
+                    <!-- Real authentic image representing Gyps Vultures in Indian Conservation Centres -->
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/67/Gyps_bengalensis_white-rumped_vultures.jpg" alt="White-Rumped Vultures in Conservation Centre">
+                </div>
+                <div class="species-content">
+                    <h3>Vulture Conservation Breeding Centres</h3>
+                    <p>Established to combat catastrophic population crashes of *Gyps* vultures due to veterinary NSAID toxicity, these specialized aviaries maintain safe insurance colonies to guarantee future wild repopulation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 7: THE BRIDGE TO THE WILD -->
+    <section class="bridge-section">
+        <blockquote class="bridge-quote">
+            "Ex-situ conservation is not an end in itself, but a vital bridge—holding species safely in human care until their natural homes are restored and safe for their return."
+        </blockquote>
+        <div class="bridge-author">The Conservation Mandate</div>
+    </section>
+
+    <!-- SECTION 8: SCIENTIFIC CHALLENGES & PROTOCOLS -->
+    <section class="magazine-section">
+        <div class="section-header">
+            <div class="section-eyebrow">Critical Analysis</div>
+            <h2 class="section-title">Scientific Challenges & Reintroduction Protocols</h2>
+        </div>
+        <div class="challenges-grid">
+            <div class="challenge-col">
+                <h4>Genetic Drift & Domestication</h4>
+                <p>Multi-generational captive environments risk accidental selection pressure favoring traits adapted to human care, which can diminish innate wild foraging efficiency and predator avoidance behaviors[cite: 47].</p>
+            </div>
+            <div class="challenge-col">
+                <h4>Soft Release Acclimatization</h4>
+                <p>Before full release, animals experience phased transitions via pre-release acclimation bomas within native habitats, allowing them to re-learn natural foraging patterns under careful surveillance.</p>
+            </div>
+            <div class="challenge-col">
+                <h4>Logistical & Financial Overheads</h4>
+                <p>Maintaining advanced cryogenic repositories, disease-screening laboratories, and specialized veterinary infrastructure demands continuous funding allocations and robust public-private institutional backing.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Script: Letter Splitting & Scroll Animation -->
+    <script>
+        function splitIntoSpans(element) {
+            const text = element.textContent;
+            element.innerHTML = '';
+            return text.split('').map(char => {
+                const span = document.createElement('span');
+                span.className = 'char';
+                span.textContent = char === ' ' ? '\u00A0' : char;
+                element.appendChild(span);
+                return span;
+            });
+        }
+
+        const heroTitleLines = document.querySelectorAll('.hero-title-line');
+        const heroTitleChars = [];
+        heroTitleLines.forEach(line => {
+            const chars = splitIntoSpans(line);
+            chars.forEach(c => heroTitleChars.push(c));
+        });
+
+        heroTitleChars.forEach((char, idx) => {
+            char.style.animationDelay = `${0.5 + (idx * 0.04)}s`;
+        });
+
+        const heroStage = document.getElementById('heroStage');
+        const heroPhoto = document.querySelector('.hero-photo-layer');
+        const heroCutout = document.querySelector('.hero-cutout-layer');
+        const heroMeltGradient = document.getElementById('heroMeltGradient');
+        const mapPill = document.getElementById('mapPill');
+
+        window.addEventListener('scroll', () => {
+            const scrollTop = window.scrollY;
+            const viewportH = window.innerHeight;
+            const heroProgress = Math.min(Math.max(scrollTop / viewportH, 0), 1);
+            
+            heroStage.style.transform = `translateY(${scrollTop * 0.32}px)`;
+
+            const gradientOpacity = Math.min(Math.max((heroProgress - 0.1) / 0.5, 0), 1);
+            heroMeltGradient.style.opacity = gradientOpacity;
+
+            const blurVal = heroProgress * 6;
+            heroPhoto.style.filter = `blur(${blurVal}px)`;
+            heroCutout.style.filter = `blur(${blurVal}px)`;
+            mapPill.style.opacity = Math.max(1 - (heroProgress * 2), 0);
+        }, { passive: true });
+    </script>
+</body>
+</html>
